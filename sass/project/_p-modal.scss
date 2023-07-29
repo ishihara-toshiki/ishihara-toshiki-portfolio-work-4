@@ -1,0 +1,111 @@
+@use "../global/definition" as *;
+
+.p-modal__contact--background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 500;
+    display: none;
+
+    // &.is-show {
+    //     display: block;
+    // }
+}
+
+
+.p-modal__contact {
+    background-color: $color-white;
+    // color: #707070;
+    width: 100%;
+    max-width: 900px;
+    max-height: 700px;
+    height: 100%;
+    padding: 60px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 501;
+    display: none;
+
+    // &.is-show {
+    //     display: block;
+    // }
+}
+
+
+.p-modal__contact--contents {
+    margin: 40px 0 40px;
+    height: calc(100% - 200px);
+    overflow: auto;
+    position: relative;
+}
+
+
+.p-modal__contact--content {
+    &:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+
+.p-modal__contact--sub-head {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 20px;
+        background: $color-accent-green;
+    }
+}
+
+.p-modal__contact--body {
+    line-height: calc(24 / 16);
+    padding-left: 20px;
+}
+
+
+.p-modal__contact--button {
+    text-align: center;
+    
+
+    // a {
+    //     padding: 14px 54px;
+    //     display: inline-block;
+    //     background-color: $color-white;
+    //     color: $color-text-black;
+    //     font-size: 16px;
+    //     font-weight: bold;
+    //     // border-radius: 8px;
+    //     box-shadow: 0 3px 6px rgba(#000, 0.16);
+    // }
+}
+
+
+.p-modal__contact--close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    // transform: translate(50%, -50%);
+    // background: $color-accent-green;
+    // border-radius: 50%;
+    // padding: 14px;
+
+
+    a {
+        display: block;
+    }
+}

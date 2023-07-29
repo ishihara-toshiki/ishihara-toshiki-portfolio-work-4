@@ -1,0 +1,185 @@
+@use "../global/definition" as *;
+
+//odd
+.c-about-item-odd {
+    display: flex;
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.c-about-item-odd__left {
+    order: 1;
+    width: 41%;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.c-about-item-odd__right {
+    order: 2;
+    width: 59%;
+    padding: 64px  120px 48px 74px;
+    position: relative;
+    z-index: 0;
+
+    @include mq('tab') {
+        padding: 20px 70px 20px 40px;
+    }
+
+    @include mq('sp') {
+        width: 100%;
+        padding: 0 0 32px 0;
+    }
+}
+
+.c-about-item-odd__right--num {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    img {
+        height: 220px;
+        width: auto;
+    }
+
+    @include mq('tab') {
+        img {
+            height: 190px;
+        }
+    }
+
+    @include mq('sp') {
+        top: auto;
+        transform: none;
+        bottom: 0;
+
+        img {
+            height: 138px;
+        }
+    }
+
+}
+
+.c-about-item-odd__right--title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    @include mq('tab') {
+        font-size: 26px;
+    }
+
+    @include mq('sp') {
+        font-size: 24px;
+    }
+}
+
+.c-about-item-odd__right--subtitle {
+    font-size: 18px;
+    margin-top: 20px;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+//even
+.c-about-item-even {
+    display: flex;
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.c-about-item-even__left {
+    width: 59%;
+    // padding: 64px  160px 48px 64px;
+    // padding: 48px  224px 46px 0;
+    padding: 36px 204px 46px 0;
+    position: relative;
+    z-index: 0;
+
+    @include mq('tab') {
+        // padding: 20px 70px 20px 40px;
+        padding: 16px 110px 20px 0;
+    }
+
+    @include mq('sp') {
+        width: 100%;
+        padding: 0 0 32px 0;
+    }
+}
+
+.c-about-item-even__right {
+    width: 41%;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.c-about-item-even__left--num {
+    position: absolute;
+    right: 84px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    img {
+        height: 220px;
+        width: auto;
+    }
+
+    @include mq('tab') {
+        right: 40px;
+
+        img {
+            height: 190px;
+        }
+    }
+
+    @include mq('sp') {
+        top: auto;
+        transform: none;
+        bottom: 0;
+        right: 0;
+
+        img {
+            height: 138px;
+        }
+    }
+
+}
+
+.c-about-item-even__left--title {
+    font-size: 30px;
+    font-weight: 700;
+
+    @include mq('tab') {
+        font-size: 26px;
+    }
+
+    @include mq('sp') {
+        font-size: 24px;
+    }
+}
+
+.c-about-item-even__left--subtitle {
+    font-size: 18px;
+    margin-top: 20px;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+
+}

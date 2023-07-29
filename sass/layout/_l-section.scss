@@ -1,0 +1,21 @@
+@use "../global/definition" as *;
+
+.l-section {
+    padding-top: 125px;
+    padding-bottom: 125px;
+
+    @include mq('sp') {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.l-section-menu {
+    padding-top: 72px;
+    padding-bottom: 72px;
+
+    @include mq('sp') {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}

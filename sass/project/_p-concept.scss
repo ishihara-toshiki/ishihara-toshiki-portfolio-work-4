@@ -1,0 +1,49 @@
+@use "../global/definition" as *;
+
+.p-concept {
+    padding-top: 120px;
+    padding-bottom: 110px;
+    background: $color-main-black;
+    color: $color-text-white;
+    text-align: center;
+    position: relative;
+
+    @include mq('sp') {
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+}
+
+.p-concept__title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    @include mq('sp') {
+        font-size: 20px;
+    }
+}
+
+.p-concept__detail {
+    margin-top: 47px;
+
+    @include mq('sp') {
+        margin-top: 20px;
+    }
+}
+
+.p-concept__detail--text {
+    font-size: 18px;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+}
+
+.p-concept__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}

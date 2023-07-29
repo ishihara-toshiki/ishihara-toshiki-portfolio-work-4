@@ -1,0 +1,62 @@
+@use "../global/definition" as *;
+
+.p-menu {
+    background: $color-main-black;
+}
+
+.p-menu__block {
+    border: 2px solid $color-white;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 104px 100px;
+
+    @include mq('sp') {
+        padding: 32px 20px;
+    }
+}
+
+.p-menu__block--recommend {
+    margin-top: 105px;
+
+    @include mq('sp') {
+        margin-top: 48px;
+    }
+}
+
+.p-menu__block--example {
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+
+    @include mq('sp') {
+        display: block;
+        margin-top: 48px;
+    }
+}
+
+.p-menu__block--example-1 {
+    width: 48%;
+    margin-right: auto;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.p-menu__block--example-2 {
+    width: 48%;
+
+    @include mq('sp') {
+        width: 100%;
+        margin-top: 48px;
+    }
+}
+
+.p-menu__block--instagram {
+    margin-top: 70px;
+
+    @include mq('sp') {
+        margin-top: 48px;
+    }
+}

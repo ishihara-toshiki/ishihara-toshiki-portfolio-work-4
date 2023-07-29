@@ -1,0 +1,191 @@
+@use "../global/definition" as *;
+
+//menu-instagram
+
+.c-menu-instagram__board {
+    background: $color-white;
+    padding: 13px;
+    position: relative;
+    text-align: center;
+}
+
+.c-menu-instagram__board--border {
+    border: 1px solid $color-black;
+    padding-top: 80px;
+    padding-bottom: 32px;
+    padding-left: 48px;
+    padding-right: 48px;
+
+    @include mq('sp') {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 54px;
+    }
+}
+
+.c-menu-instagram__board--top {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: $color-accent-green;
+    color: $color-text-white;
+    padding: 10px 90px;
+    text-align: center;
+
+    @include mq('tab') {
+        padding: 8px 30px;
+    }
+
+    @include mq('sp') {
+        padding: 40px 10px 16px;
+        max-width: 211px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.c-menu-instagram__board--top__title {
+    font-size: 30px;
+    color: $color-text-white;
+    font-family: "reross-quadratic", sans-serif;
+    letter-spacing: 1.5px;
+    
+    @include mq('sp') {
+        font-size: 24px;
+    }
+}
+
+.c-menu-instagram__board--explain {
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 8px;
+    display: inline-block;
+    position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-35deg);
+            height: 35px;
+            width: 1px;
+            background: $color-black;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%) rotate(35deg);
+            height: 35px;
+            width: 1px;
+            background: $color-black;
+        }
+
+        @include mq('tab') {
+            &::before {
+                left: -20px;
+            }
+    
+            &::after {
+                right: -20px;
+            }
+        }
+
+
+        @include mq('sp') {
+            font-size: 16px;
+
+            &::before {
+                display: none;
+            }
+    
+            &::after {
+                display: none;
+            }
+        }
+}
+
+.c-menu-instagram__board--img__items {
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+    // width: 964px;
+    // height: auto;
+
+    @include mq('sp') {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+        margin-top: 26px;
+    }
+}
+
+.c-menu-instagram__board--img__item {
+    width: 229px;
+    height: 229px;
+    flex-shrink: 0;
+    
+    // img {
+    //     width: 229px;
+    //     height: 229px;
+    // }
+
+    @include mq('tab') {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    // @include mq('pc') {
+    //     width: calc(25% - 16px * 3 / 4);
+    //     margin-right: 16px;
+
+    //     &:last-child {
+    //         margin-right: 0;
+    //     }
+    // }
+
+    @include mq('sp') {
+        width: calc(50% - 10px * 1 / 2);
+        height: auto;
+        margin-right: 10px;
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(n + 3) {
+            margin-top: 10px;
+        }
+
+
+    }
+    
+}
+
+.c-menu-instagram__board--text {
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 8px;
+    display: inline-block;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+
+}
+
+.c-menu-instagram__board--more {
+    margin-top: 26px;
+
+    @include mq('sp') {
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,74 @@
+@use "../global/definition" as *;
+
+.c-access__title--tf {
+    font-family: "reross-quadratic", sans-serif;
+    // height: 20px;
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.c-access__title {
+    @include mq('sp') {
+        text-align: center;
+    }
+}
+
+.c-access__title--reross {
+    font-family: "reross-quadratic", sans-serif;
+    font-size: 32px;
+
+    @include mq('tab') {
+        font-size: 28px;
+    }
+
+    @include mq('sp') {
+        font-size: 32px;
+    }
+}
+
+.c-access__detail-1 {
+    margin-top: 20px;
+    line-height: 36px;
+
+    @include mq('tab') {
+        margin-top: 10px;
+    }
+
+    @include mq('sp') {
+        margin-top: 24px;
+    }
+}
+
+.c-access__detail-2 {
+    margin-top: 20px;
+
+    @include mq('tab') {
+        margin-top: 10px;
+    }
+
+    @include mq('sp') {
+        margin-top: 10px;
+    }
+}
+
+.c-access__detail-2--item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+
+.c-access__detail-2--left {
+    width: 80px;
+    margin-right: 14px;
+}
+
+.c-access__detail-2--right {
+    width: calc(100% - 104px);
+}
+
+.c-access__detail-2--right--last {
+    margin-top: 8px;
+}

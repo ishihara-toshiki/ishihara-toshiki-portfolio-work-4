@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// 色
+$color-text-black: #333;
+$color-text-white: #FFF;
+
+$color-black: #333;
+$color-white: #FFF;
+
+$color-main-white: #F2F2F2;
+$color-main-black: #2F2F2F;
+
+$color-accent-green: #159741;
+
+$color-bg: #FFFFFF;
+$color-btn-main: #333333;
+
+// 幅
+$layout-width-inner: 1380px;
+
+
+
+// ブレークポイント
+$breakpoints: (
+ "sp": "(max-width: 767px)", 
+ "tab": "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+ "pc": "(min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

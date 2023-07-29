@@ -1,0 +1,22 @@
+@use "../global/definition" as *;
+
+.p-about {
+    background: $color-main-white;
+}
+
+.p-about__block {
+    margin: 96px auto 0;
+    max-width: 1080px;
+}
+
+.p-about__block--item {
+    margin-top: 68px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @include mq('sp') {
+        margin-top: 56px;
+    }
+}

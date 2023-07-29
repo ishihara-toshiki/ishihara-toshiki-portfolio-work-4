@@ -1,0 +1,243 @@
+@use "../global/definition" as *;
+
+.c-menu-block-1 {
+    // display: flex;
+    // align-items: center;
+    // transform: translateX(-8%);
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    @include mq('sp') {
+        width: 100%;
+        padding-top: 242px;
+    }
+
+}
+
+.c-menu-block-2 {
+    // display: flex;
+    // align-items: center;
+    position: relative;
+    padding-top: 360px;
+
+    @include mq('tab') {
+        padding-top: 250px;
+    }
+
+    @include mq('sp') {
+        padding-top: 242px;
+    }
+}
+
+.c-menu-block__img {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    // width: 50%;
+    // transform: translateX(19%);
+
+    img {
+        width: 451px;
+        height: 445px;
+    }
+
+    @include mq('tab') {
+        left: auto;
+        right: 54%;
+
+        img {
+            width: 300px;
+            height: 294px;
+            // width: 100%;
+            // height: auto;
+        }
+    }
+
+    @include mq('sp') {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+
+        img {
+            width: 280px;
+            height: auto;
+        }
+    }
+}
+
+.c-menu-block__img-2 {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+    img {
+        width: 451px;
+        height: 445px;
+    }
+
+    @include mq('tab') {
+        img {
+            width: 300px;
+            height: 294px;
+        }
+    }
+
+    @include mq('sp') {
+        img {
+            width: 280px;
+            height: auto;
+        }
+    }
+}
+
+.c-menu-block__board {
+    background: $color-white;
+    margin-left: auto;
+    // width: 56%;
+    text-align: center;
+    max-width: 600px;
+    padding: 13px;
+    position: relative;
+
+    @include mq('tab') {
+        max-width: 62%;
+    }
+
+    @include mq('sp') {
+        max-width: 100%;
+    }
+}
+
+.c-menu-block__board-2 {
+    background: $color-white;
+    text-align: center;
+    max-width: 524px;
+    padding: 13px;
+
+    @include mq('sp') {
+        max-width: 100%;
+    }
+}
+
+.c-menu-block__board--border {
+    border: 1px solid $color-black;
+    padding-top: 100px;
+    padding-bottom: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.c-menu-block__board--border-2 {
+    border: 1px solid $color-black;
+    padding-top: 60px;
+    padding-bottom: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include mq('sp') {
+        padding-top: 40px;
+        padding-bottom: 28px;
+    }
+}
+
+.c-menu-block__board--top {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: $color-accent-green;
+    color: $color-text-white;
+    padding: 10px 50px;
+    text-align: center;
+
+    @include mq('tab') {
+        padding: 8px 30px;
+    }
+
+    @include mq('sp') {
+        padding: 40px 10px 16px;
+        max-width: 211px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.c-menu-block__board--top__subtitle {
+    font-size: 14px;
+    font-family: 'Satisfy', cursive;
+
+    @include mq('tab') {
+        font-size: 12px;
+    }
+
+    @include mq('sp') {
+        font-size: 12px;
+    }
+}
+
+.c-menu-block__board--top__title {
+    font-size: 24px;
+    font-weight: 500;
+
+    @include mq('tab') {
+        font-size: 18px;
+    }
+
+    @include mq('sp') {
+        font-size: 18px;
+    }
+}
+
+.c-menu-block__board--title {
+    // margin-top: 100px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 700;
+
+    @include mq('tab') {
+        font-size: 24px;
+    }
+
+    @include mq('sp') {
+        font-size: 22px;
+    }
+}
+
+.c-menu-block__board--price {
+    font-size: 40px;
+    font-family: "reross-quadratic", sans-serif;
+    letter-spacing: 4px;
+    margin-top: 10px;
+
+    @include mq('tab') {
+        font-size: 30px;
+    }
+
+    @include mq('sp') {
+        font-size: 28px;
+    }
+}
+
+.c-menu-block__board--nutrition {
+    font-size: 24px;
+    margin-top: 14px;
+
+    @include mq('tab') {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+
+    }
+
+    @include mq('sp') {
+        font-size: 12px;
+        letter-spacing: 0.2px;
+    }
+}
+
+
+

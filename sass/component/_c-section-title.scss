@@ -1,0 +1,102 @@
+@use "../global/definition" as *;
+
+.c-section-subtitle {
+    text-align: center;
+    color: $color-accent-green;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+
+    @include mq('sp') {
+        font-size: 14px;
+    }
+}
+
+.c-section-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "reross-quadratic", sans-serif;
+    // line-height: 1.2;
+    position: relative;
+    margin-top: 12px;
+    
+
+    &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: -14px;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background: $color-accent-green;
+    }
+
+    @include mq('sp') {
+        font-size: 32px;
+    }
+}
+
+.c-section-subtitle-2 {
+    text-align: center;
+    color: $color-text-white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+
+    @include mq('sp') {
+        font-size: 14px;
+    }
+}
+
+.c-section-title-2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    color: $color-text-white;
+    font-family: "reross-quadratic", sans-serif;
+    // line-height: 1.2;
+    position: relative;
+    
+
+    &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: -24px;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background: $color-text-white;
+    }
+
+    @include mq('sp') {
+        font-size: 32px;
+    }
+}
+
+.c-section-nutrition {
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-text-white;
+    text-align: center;
+    margin-top: 52px;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+}
+
+.c-section-text-contact {
+    font-weight: 400;
+    margin-top: 32px;
+    text-align: center;
+
+    @include mq('sp') {
+        margin-top: 48px;
+        text-align: left;
+    }
+}
+
+

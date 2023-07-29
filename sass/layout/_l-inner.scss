@@ -1,0 +1,23 @@
+@use "../global/definition" as *;
+
+.l-inner {
+    max-width: $layout-width-inner;
+    width: 100%;
+    margin: auto;
+
+    @include mq('tab') {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include mq('sp') {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+

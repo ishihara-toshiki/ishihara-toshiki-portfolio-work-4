@@ -1,0 +1,277 @@
+@use "../global/definition" as *;
+
+.p-contact {
+    background: url(../img/contact_bg.png) no-repeat top center / cover;
+}
+
+.p-contact__form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 140px 72px;
+    background: $color-main-white;
+
+    @include mq('sp') {
+        padding: 64px 14px;
+    }
+}
+
+.p-contact__form--wrapper {
+    margin-top: 48px;
+
+    @include mq('sp') {
+        margin-top: 32px;
+    }
+}
+
+.p-contact__form--row {
+    &:not(:first-child) {
+        margin-top: 36px;
+    }
+}
+
+.p-contact__form--label {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+
+    label {
+        &.is-required {
+            display: inline-block;
+            position: relative;
+            
+    
+            &::after {
+                content: "必須";
+                position: absolute;
+                top: 50%;
+                left: calc(100% + 10px);
+                transform: translateY(-50%);
+                padding: 4px 4px 5px;
+                border-radius: 6px;
+                background-color: $color-accent-green;
+                color: $color-text-white;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1;
+                width: 30px;
+                text-align: center;
+    
+                @include mq('sp') {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: calc(100% + 2px);
+                    width: 44px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}
+
+.p-contact__form--input {
+    margin-top: 6px;
+}
+
+.p-contact__form--button {
+    text-align: center;
+    margin-top: 54px;
+}
+
+.p-contact__form--check {
+    text-align: center;
+    margin-top: 33px;
+
+    [type="checkbox"] {
+        display: none;
+    }
+
+    span {
+        display: inline-block;
+        padding-left: 49px;
+        position: relative;
+        line-height: 1;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            background: $color-white;
+            border: 1px solid $color-main-black;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+        @include mq('sp') {
+            &::before {
+                left: 0;
+            }
+        }
+
+        &:hover::before {
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+
+        // &:focus::before {
+        //     outline: none;
+        //     border: 1px solid $color-accent-green;
+        //     box-shadow: 0 0 5px 1px $color-accent-green;
+        // }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: transparent url(../img/contact_check.png) no-repeat center center /contain;
+            left: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all .3s ease 0s;
+
+        }
+
+        @include mq('sp') {
+            &::after {
+                left: 0;
+            }
+        }
+
+        a {
+            font-weight: 500;
+            border-bottom: 1px solid $color-accent-green;
+            color: $color-accent-green;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+    }
+
+    [type="checkbox"]:checked + span {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+//初期化
+.p-contact__form--input {
+    [type="text"] {
+        box-shadow: none;
+        border: 1px solid $color-main-black;
+        background: #fff;
+        padding: 14px 16px;
+        appearance: none;
+        border-radius: 0;
+        color: inherit;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+    }
+
+    [type="email"] {
+        box-shadow: none;
+        border: 1px solid $color-main-black;
+        background: #fff;
+        padding: 10px 16px;
+        appearance: none;
+        border-radius: 0;
+        color: inherit;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+    }
+
+    [type="tel"] {
+        box-shadow: none;
+        border: 1px solid $color-main-black;
+        background: #fff;
+        padding: 10px 16px;
+        appearance: none;
+        border-radius: 0;
+        color: inherit;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+    }
+
+    textarea {
+        box-shadow: none;
+        border: 1px solid $color-main-black;
+        background: #fff;
+        padding: 10px 16px;
+        appearance: none;
+        border-radius: 0;
+        color: inherit;
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+        height: 150px;
+        resize: none;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $color-accent-green;
+            box-shadow: 0 0 5px 1px $color-accent-green;
+        }
+    }
+}
+
+[type="submit"] {
+    appearance: none;
+    font-family: inherit;
+    border: none;
+}

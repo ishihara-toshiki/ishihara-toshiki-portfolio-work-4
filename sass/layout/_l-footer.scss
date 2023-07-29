@@ -1,0 +1,144 @@
+@use "../global/definition" as *;
+
+.l-footer {
+    padding-top: 56px;
+    padding-bottom: 10px;
+    background: $color-main-white;
+    position: relative;
+
+    @include mq('sp') {
+        padding-top: 48px;
+    }
+}
+
+.l-footer__sns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-footer__sns--item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-main-black;
+    border: 2px solid $color-main-black;
+    margin-right: 40px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+
+    .fa-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+        background: $color-white;
+
+        .fa-icon {
+            color: $color-main-black;
+        }
+    }
+
+
+}
+
+
+
+.l-footer__menu {
+    margin-top: 40px;
+}
+
+.l-footer__menu--lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "reross-quadratic", sans-serif;
+}
+
+.l-footer__menu--list {
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        padding: 10px 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 100%;
+            height: 2px;
+            background: $color-accent-green;
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.l-footer__logo {
+    margin-top: 36px;
+    text-align: center;
+
+    img {
+        width: 166px;
+        height: 90px;
+    }
+}
+
+.l-footer__copyright {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 22px;
+
+    @include mq('sp') {
+        margin-top: 36px;
+    }
+}
+
+.l-footer__page-top {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 120px;
+    height: 120px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    @include mq('tab') {
+        width: 100px;
+        height: 100px;
+    }
+
+    @include mq('sp') {
+        width: 70px;
+        height: 70px;
+        right: 30px;
+    }
+}

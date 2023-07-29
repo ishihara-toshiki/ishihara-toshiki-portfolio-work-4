@@ -1,0 +1,7 @@
+@use "../global/definition" as *;
+
+.u-menu-instagram__top {
+    @include mq('sp') {
+        padding: 10px 34px;
+    }
+}

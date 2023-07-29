@@ -1,0 +1,38 @@
+@use "../global/definition" as *;
+
+.is-pc {
+    @include mq('sp') {
+        display: none;
+    }
+}
+
+.is-sp {
+    @include mq('pc') {
+        display: none;
+    }
+
+    @include mq('tab') {
+        display: none;
+    }
+}
+
+
+.is-tab {
+    @include mq('pc') {
+        display: none;
+    }
+
+    @include mq('sp') {
+        display: none;
+    }
+}
+
+
+.is-tab_sp {
+    @include mq('pc') {
+        display: none;
+    }
+}
+
+
+

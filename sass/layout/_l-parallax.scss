@@ -1,0 +1,77 @@
+@use "../global/definition" as *;
+
+
+.l-parallax {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+//parallax-1
+.l-parallax__img {
+    width: 100%;
+    height: auto;
+    // background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+    position: absolute;
+    left: 0;
+    top: -60%;
+    z-index: -100;
+
+
+}
+
+@include mq('tab') {
+    .l-parallax {
+        height: 400px;
+    }
+    
+    .l-parallax__img {
+        top: -40%;
+    }
+}
+
+@include mq('sp') {
+    .l-parallax {
+        height: 260px;
+    }
+    
+    .l-parallax__img {
+        top: 0;
+    }
+}
+
+
+
+//parallax-2
+.l-parallax__img-2 {
+    width: 100%;
+    height: auto;
+    // background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+    position: absolute;
+    left: 0;
+    top: -20%;
+    z-index: -100;
+
+
+}
+
+@include mq('tab') {
+    
+    .l-parallax__img-2 {
+        top: -10%;
+    }
+}
+
+@include mq('sp') {
+    
+    .l-parallax__img-2 {
+        top: 0;
+    }
+}

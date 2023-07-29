@@ -1,0 +1,105 @@
+@use "../global/definition" as *;
+
+.p-top {
+    position: relative;
+    background: $color-main-black;
+}
+
+
+.p-top__right {
+    position: relative;
+    width: 75%;
+    // min-width: 680px;
+    margin-left: auto;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 60.185%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @include mq('sp') {
+        width: 80%;
+
+        &::before {
+            padding-top: 78.896%;
+        }
+    }
+}
+
+.p-top__left {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    color: $color-text-white;
+    z-index: 2;
+    padding-bottom: 16px;
+
+    @include mq('sp') {
+        padding-bottom: 16px;
+    }
+
+}
+
+.p-top__left--title {
+    font-size: 100px;
+    font-family: "reross-quadratic", sans-serif;
+    line-height: 1.08;
+
+    @include mq('tab') {
+        font-size: 68px;
+    }
+
+    @include mq('sp') {
+        font-size: 36px;
+    }
+}
+
+// .p-top__left--green {
+//     color: $color-accent-green;
+// }
+
+.p-top__left--subtitle {
+    margin-top: 36px;
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 31px;
+    letter-spacing: 1.6px;
+
+    @include mq('tab') {
+        font-size: 24px;
+    }
+
+    @include mq('sp') {
+        font-size: 14px;
+        margin-top: 16px;
+        padding-left: 4px;
+    }
+}
+
+.p-top__left--subtitle2 {
+    margin-top: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    background: $color-accent-green;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 18px;
+    padding-left: 8px;
+    letter-spacing: 1.6px;
+
+    @include mq('tab') {
+        font-size: 24px;
+    }
+
+    @include mq('sp') {
+        font-size: 14px;
+    }
+}
